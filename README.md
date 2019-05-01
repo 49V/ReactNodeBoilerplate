@@ -1,0 +1,2 @@
+#React Node Boilerplate
+Boilerplate code for setting up my projects that use React.js with React Router on the Front-End and Node.js API on the Back-End for Single Page Applications (SPA). This boilerplate DOES NOT USE Server Side Rendeirng (SSR).
