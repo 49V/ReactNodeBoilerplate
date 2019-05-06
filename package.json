@@ -21,12 +21,16 @@
   },
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
+    "nodemon": "^1.19.0",
     "source-map-loader": "^0.2.4",
+    "ts-node": "^8.1.0",
     "typescript": "^3.4.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open",
+    "client": "webpack-dev-server --open",
+    "server": "nodemon --watch 'src/**/*.tsx' --exec 'ts-node' src/server/index.tsx",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "devbuild": "webpack --mode development",
     "build": "webpack --mode production"
   },
