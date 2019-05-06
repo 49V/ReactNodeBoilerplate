@@ -13,6 +13,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 app.use(express.static(path.resolve('../../', 'dist')));
 app.listen(port, () => { console.log(`App is listening on port ${port}`) });
 
+// <RESOURCE_NAME> : Repeat this for every resource.
 app.get('/', (req: any, res: any) => {
    res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });

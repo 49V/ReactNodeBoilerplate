@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/18637380/need-express-js-controller-oop-tips

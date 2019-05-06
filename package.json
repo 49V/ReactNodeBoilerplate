@@ -29,7 +29,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "webpack-dev-server --open",
-    "server": "nodemon --watch 'src/**/*.tsx' --exec 'ts-node' src/server/index.tsx",
+    "server": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server/index.ts",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "devbuild": "webpack --mode development",
     "build": "webpack --mode production"
