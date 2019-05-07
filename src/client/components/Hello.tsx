@@ -2,7 +2,10 @@ import * as React from "react";
 import { string } from "prop-types";
 import axios from "axios";
 
-export interface HelloProps { compiler: string; framework: string; }
+export interface HelloProps { 
+  compiler: string; 
+  framework: string; 
+}
 
 // 'HelloProps' describes the shape of props.
 // State is never set so we use the '{}' type.

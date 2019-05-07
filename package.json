@@ -6,6 +6,7 @@
   "dependencies": {
     "@types/react": "^16.8.16",
     "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^4.3.3",
     "axios": "^0.18.0",
     "concurrently": "^4.1.0",
     "html-webpack-plugin": "^3.2.0",
@@ -30,7 +31,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "webpack-dev-server --open",
+    "client": "webpack-dev-server --open --config webpack.config.js",
     "server": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server/index.ts",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "devbuild": "webpack --mode development",
