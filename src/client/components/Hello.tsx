@@ -1,5 +1,6 @@
 import * as React from "react";
 import { string } from "prop-types";
+import axios from "axios";
 
 export interface HelloProps { compiler: string; framework: string; }
 
@@ -9,12 +10,14 @@ export class Hello extends React.Component<HelloProps, {}> {
   state = { username: string };
 
   componentDidMount() {
-    fetch('/api/getUsername')
-      .then(res => res.json())
-      .then(user => this.setState({ username: user.username }));
+    axios.get('/api/getUsername')
+      .then(response => response)
+      .then(response => this.setState({ username: response.data.username }));
   }
 
     render() {
-        return <h1>Hello {this.state.username}!</h1>;
+        return (
+        <h1>Hello {this.state.username}!</h1>
+        );
     }
 }
