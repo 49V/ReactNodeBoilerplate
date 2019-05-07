@@ -18,4 +18,4 @@ app.get('/', (req: any, res: any) => {
    res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });
 
-app.get('/api/getUsername', (req: any, res: any) => res.send({ username: os.userInfo().username }));
+app.get('/api/getUsername', (req: any, res: any) => res.send({ username: os.userInfo().username}));
